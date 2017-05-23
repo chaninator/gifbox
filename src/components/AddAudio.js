@@ -30,7 +30,6 @@ class AddAudio extends Component {
               type="text"
               placeholder="Add Audio URL"
               required />
-
             <div className="react-player">
               <ReactPlayer url={this.state.audioUrl} playing></ReactPlayer>
             </div>

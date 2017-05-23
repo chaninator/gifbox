@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-import AddAudio from './AddAudio';
+import React, {Component} from 'react';
 import './addgifs.css';
 
 class AddGifs extends Component {
@@ -7,30 +6,29 @@ class AddGifs extends Component {
     super(props);
 
     this.state = {
-      gifUrl: ''
+      gifSearch: ''
     }
   }
 
   handleSubmit(e) {
-  e.preventDefault();
-  console.log('Gif Url Added: ', this.state.gifUrl);
-  this.setState({
-    gifUrl: this.state.gifUrl
-  })
-}
+    e.preventDefault();
+    console.log('Gif Url Search: ', this.state.gifSearch);
+    this.setState({gifSearch: this.state.gifSearch});
+    this.props.getGifs();
+  }
+
+
   render() {
-    return(
+    return (
       <section className="gif-background">
         <form name="form-add-gif" onSubmit={this.handleSubmit.bind(this)}>
           <div className="input-group">
             <input
-              value={this.state.gifUrl}
+              value={this.state.gifSearch}
               className="gif-field"
-              onChange={(e)=> this.setState({gifUrl: e.target.value})}
+              onChange={(e) => this.setState({gifSearch: e.target.value})}
               type="text"
-              placeholder="Add Gif URL"
-              required />
-            <AddAudio />
+              placeholder="Search for Gifs" required/>
           </div>
         </form>
       </section>

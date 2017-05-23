@@ -1,21 +1,25 @@
 .gif-box-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
+  background: url(https://media.giphy.com/media/fvduPgr6yVthm/giphy.gif?response_id=592478c944d6fe49dc561dae);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.party-btn {
-  border: 2px solid black;
-  padding: 10px 20px;
+a:visited {
+  color: black;
 }
 
 a {
-  text-decoration: none;
+  cursor: pointer;
 }
 
-a:active {
-  color: black;
-  
+.party-btn:hover {
+  background-color: black;
+  color: white;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+
 }
