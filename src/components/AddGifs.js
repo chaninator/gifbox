@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import './addgifs.css';
 
 class AddGifs extends Component {
@@ -13,12 +14,15 @@ class AddGifs extends Component {
   handleSubmit(e) {
     e.preventDefault();
     console.log('Gif Url Search: ', this.state.gifSearch);
-    this.setState({gifSearch: this.state.gifSearch});
-    this.props.getGifs();
+
+    this.props.onGifUrlChanged(this.state.gif)
+
+    // this.setState({gifSearch: this.state.gifSearch});
+
   }
 
-
   render() {
+    var thegifs= this.state.gifSearch
     return (
       <section className="gif-background">
         <form name="form-add-gif" onSubmit={this.handleSubmit.bind(this)}>
@@ -30,6 +34,7 @@ class AddGifs extends Component {
               type="text"
               placeholder="Search for Gifs" required/>
           </div>
+
         </form>
       </section>
     );
