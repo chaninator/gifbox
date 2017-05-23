@@ -1,0 +1,21 @@
+.gif-box-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.party-btn {
+  border: 2px solid black;
+  padding: 10px 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  
+}
