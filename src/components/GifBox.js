@@ -27,12 +27,23 @@ class GifBox extends Component {
   //   })
   // }
 
+  GifBox.propTypes = {
+  onGifSelect: React.PropTypes.func,
+};
+
+
   render() {
+
+    console.log('please work for the love of god: ', this.props.onGifSelect);
+
+
 
     return (
       <section className="gif-box-wrapper">
-        <h2>Welcome to Gif Box</h2>
-        <AddGifs { ...this.props } />
+        <div className="title-container">
+          <h2 className="title">GIF BOX</h2>
+        </div>
+        <AddGifs onGifSelect={this.props.onGifSelect} />
         <AddAudio/>
         <Link to="/letsparty">
           <a className="party-btn">

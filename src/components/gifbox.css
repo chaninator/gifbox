@@ -1,5 +1,6 @@
 .gif-box-wrapper {
-  background: url(https://media.giphy.com/media/fvduPgr6yVthm/giphy.gif?response_id=592478c944d6fe49dc561dae);
+  /*background: url(https://media.giphy.com/media/fvduPgr6yVthm/giphy.gif?response_id=592478c944d6fe49dc561dae);*/
+  background: url(https://cdn.dribbble.com/users/566817/screenshots/3437417/tokyogifathon16_dribbble.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -21,5 +22,21 @@ a {
   -ms-transition: all 500ms ease-in-out;
   -o-transition: all 500ms ease-in-out;
   transition: all 500ms ease-in-out;
+}
 
+.title-container {
+  height: 100px;
+  width: 100px;
+  background-color: rgba(255,255,255,.4);
+  border: 2px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 40px;
+  text-align: center;
+  font-family: "Megrim", sans-serif;
 }

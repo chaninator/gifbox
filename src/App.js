@@ -9,24 +9,25 @@ class App extends Component {
     super(props);
 
     this.state = {
-      gifUrl: ''
+      gifQuery: ''
     }
+    this.onGifSelect = this.onGifSelect.bind(this);
   }
 
-  onGifUrlChanged(url) {
-    alert('new url: ' + url);
+  onGifSelect(gif) {
+    alert('new gif: ' + gif);
     this.setState({
-      gifUrl: url
-    })
+      gifQuery: gif
+    });
   }
 
   render() {
-    
+    // console.log(this.onGifSelect);
     return (
       <Router>
         <div>
-          <Route onGifUrlChanged={ this.onGifUrlChanged } exact path="/" component={GifBox}/>
-          <Route gifSearch={ this.state.gifUrl } path="/letsparty" component={LetsParty}/>
+          <Route onGifSelect={this.onGifSelect} exact path="/" component={GifBox}/>
+          <Route gifSearch={this.state.gifQuery} path="/letsparty" component={LetsParty}/>
         </div>
       </Router>
     );

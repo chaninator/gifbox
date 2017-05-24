@@ -11,7 +11,7 @@ class LetsParty extends Component {
     }
   }
 
-componentDidMount(){
+componentDidMount() {
   var gifArr = [];
   console.log('this is the answer to all my problems:', this.props.gifSearch);
   let apiKey = '&api_key=dc6zaTOxFJmzC';
