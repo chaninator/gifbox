@@ -1,7 +1,5 @@
 import React, {Component} from 'react';
-import AddGifs from './AddGifs';
-import AddAudio from './AddAudio';
-import {Link} from 'react-router-dom';
+import AddParty from './AddParty';
 // import axios from 'axios';
 import './gifbox.css';
 
@@ -27,30 +25,18 @@ class GifBox extends Component {
   //   })
   // }
 
-  GifBox.propTypes = {
-  onGifSelect: React.PropTypes.func,
-};
 
 
   render() {
 
-    console.log('please work for the love of god: ', this.props.onGifSelect);
-
-
-
+    console.log('please work for the love of god: ', this.props.gifBoxInput);
+    
     return (
       <section className="gif-box-wrapper">
         <div className="title-container">
           <h2 className="title">GIF BOX</h2>
         </div>
-        <AddGifs onGifSelect={this.props.onGifSelect} />
-        <AddAudio/>
-        <Link to="/letsparty">
-          <a className="party-btn">
-            GIF ME IN THE EAR!
-          </a>
-        </Link>
-
+        <AddParty {...this.props}/>
       </section>
     );
   }

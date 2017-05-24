@@ -9,25 +9,37 @@ class App extends Component {
     super(props);
 
     this.state = {
-      gifQuery: ''
+      gifQuery: '',
+      audioLink: ''
     }
-    this.onGifSelect = this.onGifSelect.bind(this);
+    this.gifBoxInput = this.gifBoxInput.bind(this);
   }
 
-  onGifSelect(gif) {
-    alert('new gif: ' + gif);
+  gifBoxInput(gifSearch, audioUrl) {
+    alert('new gif searched: ' + gifSearch);
+    alert('this is the best song ever: ' + audioUrl);
     this.setState({
-      gifQuery: gif
+      gifQuery: gifSearch,
+      audioLink: audioUrl
     });
   }
 
+  // onAudioSelect(audioUrl) {
+  //   alert('this is the best song ever: ' + audioUrl);
+  //   this.setState({
+  //     audioLink: audioUrl
+  //   });
+  // }
+
+
   render() {
-    // console.log(this.onGifSelect);
+    console.log('Gif sent up from the child: ', this.state.gifQuery);
+    console.log('Audio sent up from the child: ', this.state.audioLink);
     return (
       <Router>
         <div>
-          <Route onGifSelect={this.onGifSelect} exact path="/" component={GifBox}/>
-          <Route gifSearch={this.state.gifQuery} path="/letsparty" component={LetsParty}/>
+          <Route exact path="/" component={ () => <GifBox gifBoxInput={ this.gifBoxInput } /> } />
+          <Route path="/letsparty" component={ () => <LetsParty gifSearch={ this.state.gifQuery } audioUrl={ this.state.audioLink } /> } />
         </div>
       </Router>
     );

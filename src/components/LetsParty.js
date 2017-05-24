@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import ReactPlayer from 'react-player';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import './letsparty.css';
@@ -6,12 +7,13 @@ import './letsparty.css';
 class LetsParty extends Component {
   constructor(props){
     super(props);
-    this.state = {
 
+    this.state = {
+      gifArray: null
     }
   }
 
-componentDidMount() {
+componentWillMount() {
   var gifArr = [];
   console.log('this is the answer to all my problems:', this.props.gifSearch);
   let apiKey = '&api_key=dc6zaTOxFJmzC';
@@ -22,6 +24,10 @@ componentDidMount() {
       gifArr.push(response.data.data[i].images.original.url);
     }
     console.log(gifArr);
+    console.log('first gif URL: ', gifArr[0]);
+    this.setState({
+      gifArray: gifArr
+    })
   }).catch(function(err) {
     console.log('error: ', err)
   })
@@ -30,16 +36,19 @@ componentDidMount() {
 
 
   render() {
-    // var background = {
-    //   backgroundImage: "url(" + this.props.gifUrl + ")"
-    // };
-    // console.log('lets party gif url loaded:', this.props.gifUrl);
+    var background = {
+      backgroundImage: "url("gifArr[0]")"
+    };
+    console.log('lets party gif url loaded:', this.props.gifUrl);
     return (
-      <section>
+      <section style={background}>
         <h1>LETS START THIS PARTY</h1>
         <Link to="/">
           <a className="party-btn">END THIS PARTY!</a>
         </Link>
+        <div className="react-player">
+          <ReactPlayer url={this.props.audioUrl} playing></ReactPlayer>
+        </div>
 
       </section>
     );
