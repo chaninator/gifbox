@@ -44,10 +44,6 @@ class LetsParty extends Component {
     })
   }
 
-  // componentWillMount() {
-  //   this.createGifArray()
-  // }
-
   componentDidMount(){
     this.createGifArray();
     setInterval(this.gifUpdate.bind(this), 3500);
@@ -64,14 +60,12 @@ class LetsParty extends Component {
   render() {
     return (
       <section className="partyStyle" style={{backgroundImage:'url(' +  this.state.backgroundImage + ')'}}>
-        {/* <h1>LETS START THIS PARTY!!!</h1> */}
         <Link to="/">
           <a className="end-party-btn">START ANOTHER PARTY!</a>
         </Link>
         <div className="react-player">
           <ReactPlayer url={this.props.audioUrl} playing></ReactPlayer>
         </div>
-
       </section>
     );
   }

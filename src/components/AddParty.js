@@ -31,7 +31,7 @@ class AddGifs extends Component {
             className="audio-field"
             onChange={(e) => this.setState({audioUrl: e.target.value})}
             type="text"
-            placeholder="Add Audio URL"
+            placeholder="Add YouTube Audio URL"
             required />
         </div>
         {/* lets party click button */}
