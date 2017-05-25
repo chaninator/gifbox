@@ -16,21 +16,11 @@ class App extends Component {
   }
 
   gifBoxInput(gifSearch, audioUrl) {
-    alert('new gif searched: ' + gifSearch);
-    alert('this is the best song ever: ' + audioUrl);
     this.setState({
       gifQuery: gifSearch,
       audioLink: audioUrl
     });
   }
-
-  // onAudioSelect(audioUrl) {
-  //   alert('this is the best song ever: ' + audioUrl);
-  //   this.setState({
-  //     audioLink: audioUrl
-  //   });
-  // }
-
 
   render() {
     console.log('Gif sent up from the child: ', this.state.gifQuery);
