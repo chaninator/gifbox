@@ -10,22 +10,22 @@ class GifBox extends Component {
 
     return (
       <section className="gif-box-wrapper">
-        <div className="boombox">
-          <div className="speaker-left">
-            <div className="top-circle"></div>
-            <div className="bot-circle"></div>
-            <div className="bot-inner-circle"></div>
+          <div className="boombox">
+            <div className="speaker-left">
+              <div className="top-circle"></div>
+              <div className="bot-circle"></div>
+              <div className="bot-inner-circle"></div>
+            </div>
+            <div className="title-container">
+              <h2 className="title">GIF BOX</h2>
+            </div>
+            <div className="speaker-right">
+              <div className="top-circle"></div>
+              <div className="bot-circle"></div>
+              <div className="bot-inner-circle"></div>
+            </div>
           </div>
-          <div className="title-container">
-            <h2 className="title">GIF BOX</h2>
-          </div>
-          <div className="speaker-right">
-            <div className="top-circle"></div>
-            <div className="bot-circle"></div>
-            <div className="bot-inner-circle"></div>
-          </div>
-        </div>
-        <AddParty {...this.props}/>
+          <AddParty {...this.props}/>
       </section>
     );
   }

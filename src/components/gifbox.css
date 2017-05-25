@@ -1,6 +1,8 @@
 .gif-box-wrapper {
-  /*background: url(https://media.giphy.com/media/fvduPgr6yVthm/giphy.gif?response_id=592478c944d6fe49dc561dae);*/
-  background: url(https://cdn.dribbble.com/users/566817/screenshots/3437417/tokyogifathon16_dribbble.gif);
+  /*background: url(https://media.giphy.com/media/3o72FkreWNH9OlTtPq/giphy.gif);*/
+  /*background: url(https://cdn.dribbble.com/users/566817/screenshots/3437417/tokyogifathon16_dribbble.gif);*/
+  /*background: url(https://cdn.dribbble.com/users/99875/screenshots/1433198/mark-and-john.gif);*/
+  background: url(https://cdn.dribbble.com/users/400493/screenshots/3050169/new_money.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -18,7 +20,7 @@ a {
 .title-container {
   height: 125px;
   width: 125px;
-  background-color: rgba(0,0,0,.7);
+  background-color: rgba(0,0,0,.5);
   border: 3px solid white;
   display: flex;
   justify-content: center;
