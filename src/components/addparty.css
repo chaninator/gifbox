@@ -8,6 +8,26 @@
   background-color: #DBE2E2;
 }*/
 
+.party-btn {
+  border: 3px solid black;
+  padding: 15px 20px;
+  font-weight: bold;
+}
+
+.party-btn:hover {
+  background-color: black;
+  color: white;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
+}
+
+.submit {
+  margin-top: 40px;
+}
+
 .input-group {
   margin-bottom: 20px;
   flex-direction: row;
@@ -15,19 +35,13 @@
 
 .gif-field {
   width: 300px;
-  height: 40px;
-  border: 2px solid #D3D6D8;
-}
-
-.add-btn {
-  width: 80px;
-  height: 40px;
-  border: 2px solid #D3D6D8;
+  height: 50px;
+  border: 3px solid #D3D6D8;
 }
 
 input::placeholder {
   color: gray;
-  /*text-align: center;*/
+  text-align: center;
   font-size: 18px;
 }
 
@@ -37,8 +51,8 @@ input[type="text"] {
 
 .audio-field {
   width: 300px;
-  height: 40px;
-  border: 2px solid #D3D6D8;
+  height: 50px;
+  border: 3px solid #D3D6D8;
 }
 
 .input-group {

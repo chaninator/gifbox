@@ -35,17 +35,17 @@ class AddGifs extends Component {
             required />
         </div>
         {/* lets party click button */}
-        <Link to="/letsparty">
-          <a className="party-btn"
-            onClick={ this.props.gifBoxInput.bind(this, this.state.gifUrl, this.state.audioUrl)}>
-            GIF ME IN THE EAR!
-          </a>
-        </Link>
+        <div className="submit">
+          <Link to="/letsparty">
+            <a className="party-btn"
+              onClick={ this.props.gifBoxInput.bind(this, this.state.gifUrl, this.state.audioUrl)}>
+              START THIS PARTY!
+            </a>
+          </Link>
+        </div>
       </section>
     );
-
   }
-
 }
 
 export default AddGifs;

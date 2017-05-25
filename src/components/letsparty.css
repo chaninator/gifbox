@@ -7,8 +7,26 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: black;
 }
 
 .react-player {
   display: none;
+}
+
+.end-party-btn {
+  border: 3px solid white;
+  padding: 15px 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.end-party-btn:hover {
+  background-color: white;
+  color: black;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -ms-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+  transition: all 500ms ease-in-out;
 }
