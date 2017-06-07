@@ -28,7 +28,7 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" component={ () => <GifBox gifBoxInput={ this.gifBoxInput } /> } />
+          <Route path="/" component={ () => <GifBox gifBoxInput={ this.gifBoxInput } /> } />
           <Route path="/letsparty" component={ () => <LetsParty gifSearch={ this.state.gifQuery } audioUrl={ this.state.audioLink } /> } />
         </div>
       </Router>
