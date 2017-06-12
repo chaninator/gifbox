@@ -36,7 +36,7 @@ class AddGifs extends Component {
         </div>
         {/* lets party click button */}
         <div className="submit">
-          <Link to="/letsparty">
+          <Link to="/gifbox/letsparty">
             <a className="party-btn"
               onClick={ this.props.gifBoxInput.bind(this, this.state.gifUrl, this.state.audioUrl)}>
               START THIS PARTY!
